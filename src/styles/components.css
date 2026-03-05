@@ -1,0 +1,549 @@
+/* Root */
+.appRoot{
+    position: relative;
+    min-height: 100vh;
+}
+
+.page{
+    position: relative;
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 96px 18px 70px;
+}
+
+/* Sticky Header */
+.siteHeader{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(14px);
+    background: linear-gradient(180deg, rgba(7,10,18,0.82), rgba(7,10,18,0.58));
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.headerInner{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 12px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.identity{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 260px;
+}
+
+.nameRow{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.name{
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+}
+
+.dot{
+    opacity: 0.35;
+}
+
+.headline{
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.microHint{
+    font-size: 12px;
+    color: var(--muted2);
+}
+
+/* Nav buttons */
+.siteNav{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.navBtn{
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.04);
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.navBtn:hover{
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.16);
+}
+
+.navBtn.isActive{
+    background: rgba(160,180,255,0.12);
+    border-color: rgba(160,180,255,0.35);
+}
+
+/* Hero layout */
+.hero{
+    padding: 26px 0 10px;
+}
+
+.heroGrid{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 900px){
+    .heroGrid{ grid-template-columns: 1fr; }
+}
+
+.card{
+    border-radius: var(--radius2);
+    background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: var(--shadow2);
+    overflow: hidden;
+}
+
+.heroCard{
+    padding: 22px;
+    position: relative;
+}
+
+.heroTitle{
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -0.6px;
+}
+
+.heroSub{
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 62ch;
+}
+
+.ctaRow{
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.ctaBtn{
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.06);
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+    transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.ctaBtn:hover{
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(255,255,255,0.18);
+}
+
+.heroBadges{
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badge{
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Contact card */
+.contactCard{
+    padding: 18px 18px 16px;
+}
+
+.cardTitle{
+    margin: 0 0 12px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.contactList{
+    display: grid;
+    gap: 10px;
+}
+
+.contactList li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+}
+
+.muted{ color: var(--muted); }
+
+.contactHint{
+    margin-top: 12px;
+    color: var(--muted2);
+    font-size: 12px;
+}
+
+/* Sections */
+.sectionAnchor{
+    scroll-margin-top: 92px;
+}
+
+.section{
+    padding: 32px 0 6px;
+}
+
+.sectionHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.sectionTitle{
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+}
+
+.sectionSub{
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Cards in stacks/grids */
+.stack{
+    display: grid;
+    gap: 14px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+@media (max-width: 900px){
+    .grid{ grid-template-columns: 1fr; }
+}
+
+.roleCard, .projectCard, .skillCard{
+    padding: 18px;
+}
+
+.roleHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.roleTitle{
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.meta{
+    color: var(--muted2);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.bullets{
+    margin-top: 10px;
+    display: grid;
+    gap: 8px;
+}
+
+.bullets li{
+    list-style: none;
+    padding-left: 14px;
+    position: relative;
+    color: rgba(255,255,255,0.84);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.bullets li::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(160,180,255,0.55);
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+
+.chipRow{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.chip{
+    font-size: 12px;
+    color: var(--muted);
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.04);
+}
+
+.projectHeader{
+    margin-bottom: 8px;
+}
+
+.projectTitleRow{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.projectTitle{
+    margin: 0;
+    font-size: 16px;
+}
+
+.tagRow{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag{
+    font-size: 12px;
+    color: rgba(255,255,255,0.76);
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.03);
+}
+
+.cardFooter{
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.miniBtn{
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.04);
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.miniBtn:hover{
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.16);
+}
+
+.miniBtn:disabled{
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Skills */
+.skillColumns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+@media (max-width: 1000px){
+    .skillColumns{ grid-template-columns: 1fr; }
+}
+
+.pillList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill{
+    padding: 7px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.03);
+    color: rgba(255,255,255,0.78);
+    font-size: 12px;
+}
+
+/* Education */
+.eduHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.eduBody{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+    color: rgba(255,255,255,0.84);
+}
+
+/* Education card */
+.eduCard{
+    padding: 18px;          /* <-- the missing piece */
+}
+
+.eduRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.eduLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.eduSchool{
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.eduDegree{
+    font-size: 14px;
+    color: rgba(255,255,255,0.84);
+}
+
+.eduRight{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.eduMeta{
+    color: var(--muted2);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Mobile: stack them cleanly */
+@media (max-width: 700px){
+    .eduRow{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .eduRight{
+        align-items: flex-start;
+    }
+}
+/* Footer */
+.siteFooter{
+    margin-top: 26px;
+    padding: 22px 0 0;
+}
+
+.footerInner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 16px;
+}
+
+/* Parallax background */
+.parallaxRoot{
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.parallaxLayer{
+    position: absolute;
+    inset: -20%;
+    opacity: 0.9;
+    filter: blur(0px);
+    will-change: transform;
+}
+
+.layerBack{
+    background:
+            radial-gradient(700px 520px at 20% 20%, rgba(120,140,255,0.14), transparent 60%),
+            radial-gradient(620px 480px at 80% 30%, rgba(255,120,200,0.10), transparent 60%);
+    opacity: 0.85;
+}
+
+.layerMid{
+    background:
+            radial-gradient(520px 420px at 30% 80%, rgba(120,255,220,0.09), transparent 60%),
+            radial-gradient(700px 520px at 75% 75%, rgba(160,180,255,0.10), transparent 60%);
+    opacity: 0.55;
+}
+
+.layerFront{
+    background:
+            linear-gradient(transparent, rgba(0,0,0,0.16)),
+            radial-gradient(420px 320px at 50% 55%, rgba(255,255,255,0.05), transparent 60%);
+    opacity: 0.35;
+}
+
+.parallaxVignette{
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(900px 700px at 50% 30%, transparent 40%, rgba(0,0,0,0.28));
+}
+
+/* ensure content sits above parallax */
+.siteHeader, .page{
+    position: relative;
+    z-index: 1;
+}
